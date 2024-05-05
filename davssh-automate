@@ -1,0 +1,103 @@
+#!/bin/bash
+#Author : Dani-Zsh
+
+#Colores para el script: 
+greenColour="\e[0;32m\033[1m"
+endColour="\033[0m\e[0m"
+redColour="\e[0;31m\033[1m"
+blueColour="\e[0;34m\033[1m"
+yellowColour="\e[0;33m\033[1m"
+purpleColour="\e[0;35m\033[1m"
+turquoiseColour="\e[0;36m\033[1m"
+grayColour="\e[0;37m\033[1m"
+
+
+echo -e "${redColour}   
+  ____               ____ ____  _   _ 
+ |  _ \  __ ___   __/ ___/ ___|| | | |
+ | | | |/ _| \ \ / /\___ \___ \| |_| |
+ | |_| | (_| |\ V /  ___) |__) |  _  |
+ |____/ \__,_| \_/  |____/____/|_| |_|\n\n
+ autor: dani-zsh\n\n ${endColour} "
+
+ #Salidas(Output)
+echo -e "${redColour}[a]${endColour} ${blueColour}Seleccione para activar el servicio SSH${endColour}"
+
+echo -e "${redColour}[d]${endColour} ${blueColour}Seleccione para desactivar el servicio SSH${endColour}"
+
+echo -e "${redColour}[s]${endColour} ${blueColour}Seleccione para ver el status del servicio SSH${endColour}"
+
+echo -e "\n"
+echo -e "${blueColour}Seleccione alguna de las opciones :${endColour} "
+
+read -p  " " hola
+
+#Variables
+opcion_invalida=false
+
+function ctrl_c() {
+  echo -e "\n\nSaliendo del script...\n\n"
+  exit 1
+}
+trap ctrl_c INT
+
+#Funciones
+barra_de_carga() {
+  sudo systemctl start ssh
+  echo -ne "\n${yellowColour}Activando SSH${endColour}: "
+    for i in {1..45}; do
+        echo -ne "${yellowColour}.${endColour}" # Se puede cambiar
+        sleep 0.030
+    done
+    echo -ne "${yellowColour}\n\nSSH Activado!${endColour}"
+}
+
+
+barra_de_carga2(){
+  sudo systemctl stop ssh
+ echo -ne "${yellowColour}\n\nDesactivando SSH..${endColour}"
+ for i in {1..45}; do
+       echo -ne "${yellowColour}.${endColour}"
+       sleep 0.030
+   done
+   echo -ne "${redColour}\n\nSSH Desactivado!${endColour}"
+ }
+
+barra_de_carga3(){
+  for i in {1..45}; do
+    echo -ne "."
+    sleep 0.030
+  done
+  echo -ne "\n\nEste es el estado del servicio SSH\n\n"
+  sudo systemctl status ssh | grep "Active"
+}
+#Condicionales
+if [ "$hola" = "a" ]; then
+  barra_de_carga
+fi
+
+if [ "$hola" = "d" ]; then
+  barra_de_carga2
+fi
+
+if [ "$hola" = "s" ]; then
+  barra_de_carga3
+fi
+
+#Parametros 
+while getopts ":ads" opcion; do
+  case $opcion in
+    a) barra_de_carga;;
+    d) barra_de_carga2;;
+    s) status_ssh;;
+    \?)  >&2
+      opcion_invalida=true
+      ;;
+ esac
+done
+
+#Verificar si se introduzdco la opcion valida 
+if [ "$opcion_invalida" = true ]; then
+  echo "Opcion no valida!"
+  exit 1
+fi
