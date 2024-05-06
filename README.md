@@ -1,4 +1,9 @@
 Herramienta de Automatización SSH
+
+![davssh](https://github.com/DaniZsh/DAVSSH-Automate/assets/134653815/51144752-6986-48a8-85cb-531028b99f86)
+
+
+
 Descripción
 
 Esta herramienta es un script de Bash diseñado para simplificar la gestión de conexiones SSH. Permite a los usuarios activar, desactivar y verificar el estado de sus conexiones SSH a través de un menú interactivo fácil de usar.
