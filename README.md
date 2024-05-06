@@ -29,7 +29,7 @@ Instalación
 
     Clona el repositorio en tu máquina local:
 
-git clone (https://github.com/DaniZsh/DAVSSH-Automate)
+git clone https://github.com/DaniZsh/DAVSSH-Automate
 
     Navega al directorio del script:
 
@@ -47,3 +47,5 @@ Las contribuciones son bienvenidas. Si tienes alguna sugerencia o mejora, por fa
 Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+Un saludo especial para mi novio David, quien siempre apoya y motiva con entusiasmo. ¡Gracias por ser parte de este viaje tecnológico! <3
