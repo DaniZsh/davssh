@@ -1,14 +1,18 @@
-Descripción del Proyecto
+# Descargo de Responsabilidad para el Proyecto SSH
 
-Este script de línea de comandos proporciona una interfaz sencilla para gestionar el servicio SSH en tu sistema. Con un conjunto de comandos intuitivos, puedes activar, desactivar y verificar el estado del servicio SSH rápidamente.
-Cómo Usar
+## Uso Apropiado
+Este script y todo el código asociado se proporcionan **"tal cual"** y son solo para **fines educativos**. El uso de este script y su código para atacar infraestructuras sin el consentimiento explícito de sus propietarios es **ilegal** y está **fuera del alcance de este proyecto**.
 
-El script se maneja a través de los siguientes comandos en el menú interactivo:
+## Responsabilidad
+El autor o los colaboradores **no se hacen responsables** de los daños que puedan surgir del uso indebido de este software. Es responsabilidad del usuario final comprender y obedecer todas las leyes locales, estatales y federales aplicables en su jurisdicción.
 
-    Activar SSH: Para activar el servicio SSH, simplemente ejecuta el script con la opción a.
+## Contribuciones
+Las contribuciones son bienvenidas, pero los colaboradores deben asegurarse de que sus cambios y mejoras sigan siendo legales y éticas.
 
-    Desactivar SSH: Si necesitas desactivar el servicio SSH, utiliza la opción d.
+## Seguridad y Privacidad
+Este proyecto no recopila ni transmite ninguna información personal. Sin embargo, como herramienta que interactúa con sistemas de seguridad, los usuarios deben ser conscientes de la importancia de mantener la seguridad y la privacidad de los sistemas con los que interactúan.
 
-    Ver Estado de SSH: Para verificar el estado actual del servicio SSH, usa la opción s.
+## Licencia
+Este proyecto está licenciado bajo [PoliticaGitHub], lo que significa que puede haber restricciones adicionales en cuanto a cómo se puede utilizar y distribuir el código.
 
-Con estos comandos simples, puedes mantener el control sobre el servicio SSH de tu sistema con facilidad y eficiencia.
+Al utilizar este software, usted acepta este descargo de responsabilidad y entiende que el uso que haga del software es **bajo su propio riesgo**.
